@@ -1,18 +1,17 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
+const dotenv = require('dotenv');
 
 const connectDB = async () => {
-    try{
-        await mongoose.connect(process.env.MONGO_URI,{
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log('Mongo conectada');
-        
-    } catch(err){
-        console.error(err.message);
-        process.exit(1);
+    try {
+        const url = 'mongodb+srv://webdb:9nTljZG1NECV3iJr@cluster0.80l3q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+
+        await mongoose.connect(url);
+        console.log('conexion exitosa')
+
+    } catch (error) {
+        console.log(error)
     }
-};
+
+}
 
 module.exports = connectDB
