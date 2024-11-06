@@ -25,11 +25,11 @@ exports.postCliente = async (req, res) => {
 
 exports.updateCliente = async (req, res) => {
     try {
-        const updatedCliente = await Cliente.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        if (!updatedCliente) {
+        const updatedClient = await Cliente.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedClient) {
             return res.status(404).json({ message: 'Cliente no encontrado' });
         }
-        return res.status(200).json({ message: 'Cliente actualizado con éxito', cliente: updatedCliente });
+        return res.status(200).json({ message: 'Cliente actualizado con éxito', cliente: updatedClient });
     } catch (error) {
         return res.status(400).json({
             message: error.message

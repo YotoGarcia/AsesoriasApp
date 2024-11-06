@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json()); 
 
 
-app.use('/cliente', require('./src/routes/clienteRoute')); 
+app.use('/cliente', require('./src/routes/clienteRoute.js')); 
 app.use('/etapa', require('./src/routes/etapaRoute.js'));
 app.use('/proyecto', require('./src/routes/proyectoRoute.js'));
 app.use('/tipoProyecto', require('./src/routes/tipoProyectoRoute.js'));

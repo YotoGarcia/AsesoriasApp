@@ -5,6 +5,6 @@ const tipoProyectoController = require('../controllers/tipoProyectoController');
 router.get('/', tipoProyectoController.listTipoProyecto);
 router.post('/', tipoProyectoController.postTipoProyecto);
 router.put('/:id', tipoProyectoController.updateTipoProyecto);
-router.delete('/:id', tipoProyectoController.deleteTipoProyecto);
+router.delete(':/id', tipoProyectoController.deleteTipoProyecto);
 
 module.exports = router
